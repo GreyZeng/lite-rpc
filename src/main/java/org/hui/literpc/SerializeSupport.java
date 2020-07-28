@@ -4,17 +4,16 @@ package org.hui.literpc;
  * @author zenghui
  * @date 2020/7/28
  */
-public interface SerializeSupport<T> {
+public class SerializeSupport<E> {
 
     /**
-     * 反序列
+     * 反序列化
      *
      * @param buffer
-     * @param <T>
+     * @param <E>
      * @return
      */
-    default <T> T parse(byte[] buffer) {
-        // TODO 默认实现
+    public static <E> E parse(byte[] buffer) {
         return null;
     }
 
@@ -22,11 +21,10 @@ public interface SerializeSupport<T> {
      * 序列化
      *
      * @param entry
-     * @param <T>
+     * @param <E>
      * @return
      */
-    default <T> byte[] serialize(T entry) {
-        // TODO
+    public static <E> byte[] serialize(E entry) {
         return null;
     }
 }
